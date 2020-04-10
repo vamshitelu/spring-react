@@ -1,0 +1,22 @@
+a:hover{
+  text-decoration: none;
+}
+
+.logoutText{
+  color: white;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.headerText{
+    float: right;
+    margin-top: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+  cursor: context-menu;
+}

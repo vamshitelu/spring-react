@@ -1,0 +1,24 @@
+spring:
+  Profiles:
+    active: dev
+---
+spring:
+  profiles: local
+server:
+  port: 9500
+---
+spring:
+  profiles: dev
+server:
+  port: 9600
+---
+spring:
+  profiles: qa
+server:
+  port: 9700
+---
+spring:
+  profiles: prod
+server:
+  port: 9800
+---

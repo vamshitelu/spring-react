@@ -1,0 +1,15 @@
+.header{
+	min-height: 4em;
+	background-color: blueviolet;
+}
+
+.margintop{
+	margin-top: 25px;
+}
+
+.marginleft{
+	margin-left: 120px;
+}
+.floatRight{
+	float: right;
+}
