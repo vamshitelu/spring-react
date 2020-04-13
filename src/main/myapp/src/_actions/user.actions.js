@@ -10,12 +10,15 @@ export const userActions = {
 function login(username, password){
 	return dispatch => {
 		dispatch(request({username}));
-
 		userService.login(username, password)
 			.then(
 				user => {
 					dispatch(success(user));
-					history.push('/');
+					if(user.authorities[0].authority === 'admin'){
+						history.push('/admin');
+					}else{
+						history.push('/');
+					}
 				},
 				error => {
 					dispatch(failure(error.toString()));

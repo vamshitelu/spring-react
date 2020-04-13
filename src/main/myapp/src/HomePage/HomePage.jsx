@@ -1,11 +1,9 @@
 import React  from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import { userActions } from '../_actions';
 import {HeaderPage} from '../HeaderPage';
-
 import './HomePage.css';
+import { NavbarPage } from '../NavbarPage';
 
 class HomePage extends React.Component{
 	
@@ -17,12 +15,12 @@ class HomePage extends React.Component{
 		return (e) => this.props.deleteUser(id)
 	}
 
-
 	render(){
 		const { user, users } = this.props;
 		return(
 			<div>
 			<HeaderPage />
+			<NavbarPage />
 			<div className="col-md-6 col-md-offset-3">
 			<h1>Hi, {user.firstName}!</h1>
 			<p>Your'e logged in with React!!</p>
@@ -49,7 +47,8 @@ class HomePage extends React.Component{
 								<li key={(user.id).toString()}>{user.firstName+' '+user.lastName}</li>
 							</td>
 							<td>
-								<button className="btn btn-link" onClick={this.handleDeleteUser(user.id)}>delete</button>
+								<button className="btn btn-link" 
+									onClick={this.handleDeleteUser(user.id)}>delete</button>
 							</td>
 						</tr>
 					)}
